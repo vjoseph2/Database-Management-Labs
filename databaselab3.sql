@@ -16,6 +16,7 @@ SELECT pid, name, priceUSD
 FROM products WHERE quantity > 208000;
 
 --#4 names and cities of customers in Dallas--
+SELECT name, city
 FROM customers WHERE city= 'Dallas';
 
 --#5  the names of agents not in New York and not in Tokyo --
