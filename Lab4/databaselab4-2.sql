@@ -18,12 +18,13 @@ SELECT cid, name  from customers WHERE cid in(
 			FROM orders WHERE aid NOT IN ('a01')
 			);
 --4.Get the ids of customers who ordered both product p01 and p07.--
-SELECT DISTINCT cid from orders WHERE cid in (
-			SELECT cid 
-			from orders WHERE pid='p01' AND cid in (
-								SELECT cid 
-								FROM orders WHERE pid='p07')
-						);
+SELECT cid 
+FROM orders 
+WHERE pid = 'p01'
+	INTERSECT
+SELECT cid 
+FROM orders 
+WHERE pid='p07'
 --5.Get the ids of products not ordered by any customers who placed any order through agent a07 in pid order from highest to lowest.-
 SELECT DISTINCT pid FROM orders WHERE cid in (
 			SELECT cid 
