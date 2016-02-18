@@ -37,6 +37,7 @@ SELECT name, city, discount FROM customers WHERE cid in (
 										FROM agents WHERE city= 'London' or city ='New York')
 							);
 --Get all customers who have the same discount as that of any customers in Dallas or London--
-SELECT name FROM customers WHERE discount in (
-											SELECT discount 
-											FROM customers WHERE city	in ('London','Dallas'));
+SELECT * FROM customers WHERE discount in (
+										SELECT discount FROM customers 
+										WHERE city in ('Dallas', 'London'))
+											AND city not in ('Dallas', 'London');
