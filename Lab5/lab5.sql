@@ -23,6 +23,13 @@ WHERE ordno is NULL;
 --5.Show the names of customers who placed at least one order through an agent in their own city, along
 --with those agent(s’) names.
 
+SELECT c.name, a.name FROM orders o, agents a, customers c
+INNER JOIN 
+agents ON o.aid = a.aid
+INNER JOIN 
+customers ON o.cid = c.cid
+WHERE c.city = a.city;
+
 --6. Show the names of customer and agents living in the same--
 --city along with the name of the shared city, regardless of --
 --whether or not the customer has ever placed an order with that agent.--
