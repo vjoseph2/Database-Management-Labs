@@ -41,7 +41,7 @@ INNER JOIN products p on o.pid=p.pid;
 
 SELECT * FROM agents a INNER JOIN orders o on a.aid=o.aid
 
-SELECT * FROM agents a LEFT OUTER JOIN orders o on a.aid=o.aid
+	SELECT * FROM agents a LEFT OUTER JOIN orders o on a.aid=o.aid
 
 SELECT *  FROM orders o
 LEFT OUTER JOIN products p ON o.pid = p.pid
