@@ -17,3 +17,8 @@ SELECT name, priceusd from products WHERE priceUSD > (SELECT avg(products.priceU
 --3.Display the customer name, pid ordered, and the total for all orders, sorted by total from high to low--
 SELECT customers.name, o.pid, o.dollars FROM orders o INNER JOIN customers ON o.cid = customers.cid ORDER BY o.dollars DESC;
 
+--4. Display all customer names (in alphabetical order) and their total ordered, and nothing more. Use--
+--coalesce to avoid showing NULLs--
+
+select c.name , coalesce(sum(o.qty),0) as totalQty from customers c left OUTER JOIN orders o on c.cid=o.cid GROUP BY c.name 
+
