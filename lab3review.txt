@@ -1,0 +1,41 @@
+8 pts
+
+Correct output for some queries
+Mostly correct SQL statements
+SQL statements are somewhat readable
+
+Recommendations: 
+ To improve your readability, write queries instead of this
+  SELECT * 
+  FROM products WHERE city NOT IN('Dallas', 'Duluth') and products.priceusd >=1;
+ do it like this:
+  SELECT *
+  FROM products
+  WHERE city NOT IN ('Dallas', 'Duluth')
+    AND priceUSD >= 1;
+
+
+
+7. List all data for orders in January or March.
+
+Incorrect SQL statement
+- Your query produced an error!
+  ERROR:  column "month" does not exist
+  LINE 1:  SELECT * FROM orders WHERE month = 'Janurary' or month='Feb...
+
+
+9. List all orders from the customer whose cid is C005.
+
+Incorrect output
+- You are not listing the orders, but customer info!
+
+
+In general: 
+
+- Test all your SQL statements.
+
+- Make sure you read all the instructions for queries really well.
+
+
+
+- Dr. Rivas
