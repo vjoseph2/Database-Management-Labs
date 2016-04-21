@@ -1,0 +1,39 @@
+8 pts
+
+Correct queries
+Correct SQL statements
+SQL statements are readable
+Correct output for some queries
+
+
+2. Get the ids of products ordered through any agent who takes at least one
+order from a customer in Dallas, sorted by pid from highest to lowest. (This is
+not the same as asking for ids of products ordered by customers in Dallas.)
+
+Incorrect output
+- Is the table agents really necessary here?
+
+
+3. Get the ids and names of customers who did not place an order through agent
+a01.
+
+Incorrect output
+- What about customers that did not place an order at all?
+
+
+
+
+In general: 
+
+- Please do not use tabs for indentation. Use spaces instead.
+
+- Test all your SQL statements.
+
+- Make sure you read all the instructions for queries really well.
+
+- Make sure you have semicolons at the end of each of your queries. 
+  Your query produced an error!
+                                                                ^
+
+
+- Dr. Rivas
