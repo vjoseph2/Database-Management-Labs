@@ -1,0 +1,31 @@
+<-= 1 =->
+city = Tokyo
+city = Duluth
+<-= 2 =->
+pid = p05
+pid = p03
+<-= 3 =->
+name = Weyland-Yutani
+<-= 4 =->
+name = Weyland-Yutani
+<-= 5 =->
+ERROR:  invalid reference to FROM-clause entry for table "o"
+LINE 1: ...rs o, agents a, customers c INNER JOIN  agents ON o.aid = a....
+                                                             ^
+HINT:  There is an entry for table "o", but it cannot be referenced from this part of the query.
+
+<-= 6 =->
+name = ACME
+name = Otasi
+name = Tiptop
+name = Otasi
+name = Allied
+name = Smith
+name = Basics
+name = Smith
+<-= 7 =->
+ERROR:  missing FROM-clause entry for table "c"
+LINE 1:  SELECT c.name, city FROM customers WHERE city IN( SELECT ci...
+                ^
+
+<-= end =->
